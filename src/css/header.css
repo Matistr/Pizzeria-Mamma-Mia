@@ -1,0 +1,22 @@
+.header-hero {
+  width: 100%;
+  display: block;
+  background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), 
+    url('../assets/img/Header.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+  z-index: 10;
+  position: relative;
+}
+
+.header-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.header-hero p {
+  font-size: 1.25rem;
+}

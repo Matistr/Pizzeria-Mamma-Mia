@@ -1,0 +1,38 @@
+.card-pizza {
+  border: 1px solid #eee;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-pizza:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-pizza img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-pizza .card-body {
+  padding: 1rem;
+}
+
+.card-pizza h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-pizza ul {
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card-pizza .btn {
+  border-radius: 0.75rem;
+  font-weight: 600;
+}

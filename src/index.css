@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+:root {
+  --brand: #dc3545;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #1b1b1b;
+  background: #fafafa;
+}
+
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+}
+
+.card-pizza img {
+  height: 180px;
+  object-fit: cover;
+}
+
+footer {
+  background: #111;
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}

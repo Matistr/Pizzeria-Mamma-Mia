@@ -1,0 +1,17 @@
+nav.navbar {
+  width: 100%;
+  border-bottom: 2px solid #eee;
+  background-color: #fff !important;
+  position: relative;
+  z-index: 5;
+}
+
+nav.navbar .navbar-brand {
+  color: var(--brand);
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+nav.navbar .btn {
+  border-radius: 1rem;
+}
