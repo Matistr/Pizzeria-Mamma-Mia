@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { formatCLP } from "../utils/formatNumber";
 import "../css/navbar.css";
 
@@ -26,7 +27,9 @@ const Navbar = () => {
           )}
 
           <button className="btn btn-danger">
-            🛒 Total: {formatCLP(total)}
+            <Link to="/cart" style={{ color: "white", textDecoration: "none" }}>
+              🛒 Total: {formatCLP(total)}
+            </Link>
           </button>
         </div>
       </div>
