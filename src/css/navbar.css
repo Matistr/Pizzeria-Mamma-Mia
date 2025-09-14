@@ -4,6 +4,36 @@ nav.navbar {
   background-color: #fff !important;
   position: relative;
   z-index: 5;
+  padding: 0.5rem 2rem;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar-list li {
+  margin: 0;
+}
+
+.navbar-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.navbar-list a:hover,
+.navbar-list a.active {
+  color: #fff;
+  background-color: #c00;
 }
 
 nav.navbar .navbar-brand {
