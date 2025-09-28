@@ -5,6 +5,7 @@ nav.navbar {
   position: relative;
   z-index: 5;
   padding: 0.5rem 2rem;
+  box-sizing: border-box;
 }
 
 .navbar-list {
@@ -25,9 +26,10 @@ nav.navbar {
   color: #333;
   font-weight: 500;
   font-size: 1rem;
-  transition: color 0.2s;
+  transition: color 0.2s, background 0.2s;
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
+  display: block;
 }
 
 .navbar-list a:hover,
@@ -37,11 +39,22 @@ nav.navbar {
 }
 
 nav.navbar .navbar-brand {
-  color: var(--brand);
+  color: var(--brand, #c00);
   font-weight: 800;
   font-size: 1.25rem;
 }
 
 nav.navbar .btn {
   border-radius: 1rem;
+}
+
+@media (max-width: 600px) {
+  .navbar-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  nav.navbar {
+    padding: 0.5rem 1rem;
+  }
 }
