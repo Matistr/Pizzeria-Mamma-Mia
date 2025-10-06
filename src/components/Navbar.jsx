@@ -1,10 +1,12 @@
 import { NavLink } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { useUser } from "../context/UserContext";
 import formatNumber from "../utils/formatNumber";
 import "./../css/navbar.css";
 
 const Navbar = () => {
   const { total } = useCart();
+  const { token, logout } = useUser();
 
   return (
     <nav className="navbar">
@@ -28,6 +30,11 @@ const Navbar = () => {
             🛒 Total: ${formatNumber(total)}
           </NavLink>
         </li>
+        {token ? (
+          <li>
+            <button onClick={logout}>Logout</button>
+          </li>
+        ) : null}
       </ul>
     </nav>
   );

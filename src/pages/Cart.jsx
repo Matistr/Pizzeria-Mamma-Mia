@@ -1,8 +1,10 @@
 import { useCart } from "../context/CartContext";
+import { useUser } from "../context/UserContext";
 import formatNumber from "../utils/formatNumber";
 
 const Cart = () => {
   const { cart, addToCart, removeFromCart, deleteFromCart, total } = useCart();
+  const { token } = useUser();
 
   if (cart.length === 0)
     return <p style={{ textAlign: "center" }}>El carrito está vacío.</p>;
@@ -21,6 +23,7 @@ const Cart = () => {
         ))}
       </ul>
       <h3>Total: ${formatNumber(total)}</h3>
+      <button disabled={!token}>Pagar</button>
     </div>
   );
 };

@@ -1,30 +1,24 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CardPizza from "../components/CardPizza";
+import { useEffect, useState } from "react";
 
 const Pizza = () => {
   const { id } = useParams();
   const [pizza, setPizza] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/pizzas")
+    fetch(`/api/pizzas/${id}`)
       .then((res) => res.json())
-      .then((data) => {
-        const found = data.find((p) => p.id === id);
-        setPizza(found);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
+      .then((data) => setPizza(data));
   }, [id]);
 
-  if (loading) return <p>Cargando pizza...</p>;
-  if (!pizza) return <p>No hay pizzas disponibles</p>;
+  if (!pizza) return <p>Cargando...</p>;
 
   return (
-    <div className="pizza-detail">
+    <div>
       <h2>{pizza.nombre}</h2>
-      <CardPizza pizza={pizza} />
+      <p>{pizza.descripcion}</p>
+      <p>Precio: ${pizza.price}</p>
+      {/* Puedes agregar más detalles */}
     </div>
   );
 };
